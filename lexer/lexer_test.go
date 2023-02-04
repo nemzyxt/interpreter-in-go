@@ -10,9 +10,9 @@ func TestNextToken(t *testing.T) {
 	input := "=+(){},;"
 
 	tests := []struct {
-		expectedType token.TokenType
+		expectedType    token.TokenType
 		expectedLiteral string
-	} {
+	}{
 		{token.ASSIGN, "="},
 		{token.PLUS, "+"},
 		{token.LPAREN, "("},
@@ -31,14 +31,14 @@ func TestNextToken(t *testing.T) {
 
 		// assert the type
 		if tok.Type != tt.expectedType {
-			t.Fatalf("tests[%d] - tokenType wrong expected : %s got : %s", 
-						i, tt.expectedType, tok.Type)	
+			t.Fatalf("tests[%d] - tokenType wrong expected : %s got : %s",
+				i, tt.expectedType, tok.Type)
 		}
 
 		// assert the literal
 		if tok.Literal != tt.expectedLiteral {
-			t.Fatalf("tests[%d] - literal wrong expected : %s got : %s", 
-						i, tt.expectedLiteral, tok.Literal)
+			t.Fatalf("tests[%d] - literal wrong expected : %s got : %s",
+				i, tt.expectedLiteral, tok.Literal)
 		}
 	}
 }
