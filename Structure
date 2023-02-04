@@ -1,0 +1,5 @@
+- Lexer
+- Parser 
+- Abstract Syntax Tree (AST)
+- Internal Object System
+- Evaluator
